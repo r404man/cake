@@ -1,1 +1,107 @@
 /* You can add global styles to this file, and also import other style files */
+// @import "~swiper/swiper-bundle";
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("./assets/fonts/Montserrat-Regular.woff");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("./assets/fonts/Montserrat-Bold.woff");
+    font-weight: 700;
+}
+
+*,
+html {
+    margin: 0;
+    padding: 0;
+
+    font-family: "Montserrat", sans-serif;
+}
+
+.container {
+    max-width: 1250px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+}
+
+$titleColor: #ffc107;
+$hoverColor: #ffc107;
+
+.title {
+    font-weight: 700;
+    font-size: 22px;
+    color: $titleColor;
+}
+
+.title_2 {
+    font-weight: 700;
+    font-style: 22px;
+    color: #000;
+}
+
+.link {
+    color: #000;
+    text-decoration: underline;
+    font-size: 22px;
+    cursor: pointer;
+
+    &:hover {
+        color: $hoverColor;
+    }
+}
+
+.col-md-3 {
+    // padding: 0 !important;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 300px;
+    margin: 50px auto;
+}
+
+.swiper-slide {
+    background: #f1f1f1;
+    color: #000;
+    text-align: center;
+    line-height: 300px;
+}
+
+@import "~swiper/swiper";
+@import "~swiper/components/pagination/pagination";
+@import "~swiper/components/navigation/navigation";
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

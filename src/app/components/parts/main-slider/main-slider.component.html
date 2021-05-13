@@ -1,0 +1,70 @@
+<div class="slider">
+    <!-- <swiper [pagination]="true" class="main_slider" [slidesPerView]="1" (swiper)="onSwiper($event)" (slideChange)="onSlideChange()">
+        <ng-template swiperSlide>
+            <div class="main-slide">
+                <img src="../../../../assets/category.jpeg" alt="">
+                <div class="slide-title">
+                    Our cakes the best
+                </div>
+            </div>
+        </ng-template>
+        <ng-template swiperSlide>
+            <div class="main-slide">
+                <img src="../../../../assets/category.jpeg" alt="">
+                <div class="slide-title">
+                    Our cakes the best
+                </div>
+            </div>
+        </ng-template>
+        <ng-template swiperSlide>
+            <div class="main-slide">
+                <img src="../../../../assets/category.jpeg" alt="">
+                <div class="slide-title">
+                    Our cakes the best
+                </div>
+            </div>
+        </ng-template>
+    </swiper> -->
+
+    <swiper [config]="config">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="main-slide">
+                    <div class="shadow"></div>
+                    <img src="../../../../assets/main-slider/1.jpg" alt="">
+                    <div class="slide-title">
+                        Все виды тортов
+                    </div>
+
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="main-slide">
+                    <div class="shadow"></div>
+                    <img src="../../../../assets/main-slider/2.jpg" alt="">
+                    <div class="slide-title">
+                        Разнообразные начинки
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="shadow"></div>
+                <div class="main-slide">
+                    <img src="../../../../assets/main-slider/3.jpg" alt="">
+                    <div class="slide-title">
+                        Рецепты и формы
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="swiper-pagination">
+
+        </div>
+        <div class="swiper-button-next">
+
+        </div>
+        <div class="swiper-button-prev"></div>
+    </swiper>
+</div>

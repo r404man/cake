@@ -1,0 +1,29 @@
+.brand {
+    font-weight: 700;
+    color: #000;
+
+}
+
+.contacts-title {
+    margin-bottom: 30px;
+}
+
+.address {
+    margin-bottom: 20px;
+}
+
+$titleColor: #ffc107;
+a {
+    font-weight: 700;
+    color: #000;
+    text-decoration: underline;
+
+    &:hover {
+        color: $titleColor;
+    }
+}
+
+.contacts-info {
+    display: flex;
+    flex-direction: column;
+}

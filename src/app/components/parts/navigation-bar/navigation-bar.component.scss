@@ -1,0 +1,27 @@
+$hoverColor: #FA9E15;
+
+.nav__link {
+    margin-right: 30px;
+    text-decoration: none;
+    color: black;
+    position: relative;
+    font-weight: 700;
+    cursor: pointer;
+    padding-bottom: 10px;
+    &::after {
+        content: "";
+        background-color: $hoverColor;
+        width: 0%;
+        height: 1px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: .3s ease-in-out;
+    }
+    &:hover {
+        color: $hoverColor;
+    }
+    &:hover::after {
+        width: 100%;
+    }
+}

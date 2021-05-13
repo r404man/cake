@@ -1,0 +1,29 @@
+.footer {
+    background-color: #cecece;
+    padding: 10px 0px;
+    margin-top: 300px;
+}
+
+.phone {
+    display: flex;
+    flex-direction: column;
+
+    .whatsapp {
+
+        margin-bottom: 30px;
+    }
+}
+
+
+.social-links {
+    display: flex;
+    margin-top: 10px;
+}
+.social__link {
+    display: flex;
+    margin-right: 10px;
+    svg {
+        width: 50px;
+        height: 50px;
+    }
+}
