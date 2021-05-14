@@ -15,12 +15,15 @@ export class AuthComponent implements OnInit {
 
   auth(form: NgForm) {
     let isAuth = this.authService.auth(form.value);
-    if(isAuth) {
-      this.router.navigateByUrl('/admin/cake-category-create');
+    console.log(isAuth);
+    if(isAuth === true) {
+      this.router.navigateByUrl('admin/main/cake-category-create');
     }
   }
 
+  
   ngOnInit(): void {
+    console.log('test');
   }
 
 }

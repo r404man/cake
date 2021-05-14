@@ -24,4 +24,7 @@ $hoverColor: #FA9E15;
     &:hover::after {
         width: 100%;
     }
+    &:last-child {
+        margin-right: 0px;
+    }
 }

@@ -6,6 +6,7 @@ import { CakeCategoryComponent } from '../cake-category/cake-category.component'
 import { CakeCreateComponent } from '../cake-create/cake-create.component';
 import { FormsModule } from '@angular/forms';
 import { AdminPageComponent } from './admin-page.component';
+import { CmpCreateComponent } from '../cmp-create/cmp-create.component';
 
 const routing = RouterModule.forChild([
   { path: 'auth', component: AuthComponent },
@@ -13,9 +14,10 @@ const routing = RouterModule.forChild([
     path: 'main', component: AdminPageComponent, children: [
       { path: 'cake-category-create', component: CakeCategoryComponent },
       { path: 'cake-create', component: CakeCreateComponent },
-      { path: '**', component: AuthComponent }
+      { path: 'cmp-create', component: CmpCreateComponent },
     ]
   },
+  { path: '**', redirectTo: '/admin/auth' }
 ])
 
 @NgModule({
@@ -26,8 +28,8 @@ const routing = RouterModule.forChild([
     AdminPageComponent
   ],
   imports: [
-    CommonModule,
     FormsModule,
+    CommonModule,
     routing,
   ],
   exports: []

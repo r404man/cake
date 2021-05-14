@@ -22,6 +22,7 @@ import { CallbackFormComponent } from './components/parts/callback-form/callback
 // import { AuthComponent } from './components/pages/auth/auth.component'
 import { FormsModule } from '@angular/forms';
 import { AdminModule } from './components/pages/admin-page/admin.module';
+import { CmpCreateComponent } from './components/pages/cmp-create/cmp-create.component';
 // import { AdminPageComponent } from './components/pages/admin-page/admin-page.component';
 // import { CakeCategoryComponent } from './components/pages/cake-category/cake-category.component';
 // import { AdminNavigationBarComponent } from './components/parts/admin-navigation-bar/admin-navigation-bar.component';
@@ -43,6 +44,7 @@ import { AdminModule } from './components/pages/admin-page/admin.module';
     FooterComponent,
     MainSliderComponent,
     CallbackFormComponent,
+    CmpCreateComponent,
     // AdminPageComponent
     // AdminPageComponent,
     // AuthComponent,

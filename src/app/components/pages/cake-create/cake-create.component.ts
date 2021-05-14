@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-cake-create',
@@ -8,6 +9,10 @@ import { Component, OnInit } from '@angular/core';
 export class CakeCreateComponent implements OnInit {
 
   constructor() { }
+
+  cakeCreate(form: NgForm) {
+    console.log(form.value);
+  }
 
   ngOnInit(): void {
   }
