@@ -13,6 +13,10 @@
     font-weight: 700;
 }
 
+body {
+    min-height: 100%;
+}
+
 *,
 html {
     margin: 0;
@@ -20,6 +24,7 @@ html {
 
     font-family: "Montserrat", sans-serif;
 }
+
 
 .container {
     max-width: 1250px !important;
@@ -54,30 +59,14 @@ $hoverColor: #ffc107;
     }
 }
 
-.col-md-3 {
-    // padding: 0 !important;
-}
-
 .swiper-container {
     width: 100%;
     height: 300px;
-    margin: 50px auto;
-}
-
-.swiper-slide {
-    background: #f1f1f1;
-    color: #000;
-    text-align: center;
-    line-height: 300px;
 }
 
 @import "~swiper/swiper";
 @import "~swiper/components/pagination/pagination";
 @import "~swiper/components/navigation/navigation";
-.swiper-container {
-    width: 100%;
-    height: 100%;
-}
 
 .swiper-slide {
     text-align: center;
@@ -104,4 +93,47 @@ $hoverColor: #ffc107;
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.swiper-pagination-bullet {
+    background-color: $hoverColor;
+}
+
+input.form-control:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #ffc107;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem #ffc10740;
+}
+
+textarea.form-control:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #ffc107;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem #ffc10740;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    &:last-child {
+        text-align: center;
+        .btn-primary {
+            background-color: #ffc107;
+            font-size: 20px;
+            font-weight: 700;
+            color: #fff;
+            border: none;
+            &:hover {
+                background-color: #212529;
+            }
+        }
+    }
+}
+.alert {
+    color: green;
+}
+.error {
+    color: red;
 }

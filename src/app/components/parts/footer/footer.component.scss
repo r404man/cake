@@ -1,7 +1,11 @@
 .footer {
     background-color: #cecece;
     padding: 10px 0px;
-    margin-top: 300px;
+    // margin-top: 300px;
+    // clear: both;
+    // position: relative;
+    // height: 200px;
+    // margin-top: -200px;
 }
 
 .phone {
@@ -9,11 +13,9 @@
     flex-direction: column;
 
     .whatsapp {
-
         margin-bottom: 30px;
     }
 }
-
 
 .social-links {
     display: flex;

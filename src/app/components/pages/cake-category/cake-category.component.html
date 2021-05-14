@@ -1,0 +1,39 @@
+<div class="category row">
+    <div class="category-form col-md-4">
+        <form #categoryForm='ngForm' (submit)='category(categoryForm)'>
+            <div class="form-group">
+                <div class="form-title title">
+                    Создание новой категории
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="">Название</label>
+                <input type="text" class="form-control" placeholder="Название категории" name="title" ngModel required>
+            </div>
+            <div class="form-group">
+                <label for="">Обложка</label>
+                <input type="file" class="form-control" accept=".jpg, .png" name="category_img" (change)='categoryThumb($event)' required>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Создать</button>
+            </div>
+        </form>
+    </div>
+    <div class="category-list col-md-8">
+        <div class="category-title title">
+            Категории
+        </div>
+        <div class="category-item row">
+            <div class="category__img col-md-2">
+                <img src="../../../../assets/main-slider/1.jpg" alt="">
+            </div>
+            <div class="category__title col-md-4">
+                Детские торты
+            </div>
+            <div class="category__btn col-md-6">
+                <a href="" class="col-md-4" (click)='categoryDelete()'>Удалить</a>
+                <a href="" class="col-md-4">Редактировать</a>
+            </div>
+        </div>
+    </div>
+</div>

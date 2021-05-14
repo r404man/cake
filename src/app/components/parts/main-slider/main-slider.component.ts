@@ -14,6 +14,7 @@ export class MainSliderComponent implements OnInit {
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
+      dynamicBullets: true
     },
     navigation: {
       nextEl: '.swiper-button-next',
@@ -23,6 +24,7 @@ export class MainSliderComponent implements OnInit {
       delay: 5000,
     },
     loop: true,
+    
   }
 
   ngOnInit(): void {

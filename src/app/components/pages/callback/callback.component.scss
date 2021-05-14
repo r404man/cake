@@ -1,0 +1,24 @@
+.call-back {
+    padding: 30px 0px;
+}
+
+.call-back-title {
+    margin-bottom: 10px;
+}
+
+.message {
+    border: 1px solid #cecece;
+    border-radius: 6px;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+
+    .message__detail {
+        display: flex;
+        .message__date {
+            margin-right: 5px;
+        }
+        .message__name {
+            font-weight: 700;
+        }
+    }
+}

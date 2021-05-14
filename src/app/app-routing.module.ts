@@ -8,9 +8,14 @@ import { CallbackComponent } from './components/pages/callback/callback.componen
 
 const routes: Routes = [
   { path: 'main', component: MainPageComponent },
+  // {path: 'main/:categoryId', component}
   { path: 'components', component: CompntsComponent },
   { path: 'callback', component: CallbackComponent },
   { path: 'contacts', component: ContactsComponent },
+  {
+    path: 'admin', loadChildren: () => import('../app/components/pages/admin-page/admin.module')
+      .then(m => m.AdminModule)
+  },
   { path: '**', redirectTo: '/main' },
 ]
 

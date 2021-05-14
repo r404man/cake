@@ -1,0 +1,16 @@
+<div class="auth">
+    <form #authForm="ngForm" (submit)="auth(authForm)" class="auth-form" >
+        <div class="auth-title title">Войдите для продолжения</div>
+        <div class="form-group">
+            <label for="">Логин</label>
+            <input type="text" name="username" class="form-control" ngModel required>
+        </div>
+        <div class="form-group">
+            <label for="">Пароль</label>
+            <input type="password" name="password" class="form-control" ngModel required>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="form-btn btn btn-primary">Войти</button>
+        </div>
+    </form>
+</div>

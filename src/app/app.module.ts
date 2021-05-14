@@ -16,7 +16,16 @@ import { FooterComponent } from './components/parts/footer/footer.component';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { MainSliderComponent } from './components/parts/main-slider/main-slider.component';
 
-import { NgxUsefulSwiperModule } from 'ngx-useful-swiper'
+import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
+import { CallbackFormComponent } from './components/parts/callback-form/callback-form.component';
+// import { AdminPageComponent } from './components/pages/admin-page/admin-page.component';
+// import { AuthComponent } from './components/pages/auth/auth.component'
+import { FormsModule } from '@angular/forms';
+import { AdminModule } from './components/pages/admin-page/admin.module';
+// import { AdminPageComponent } from './components/pages/admin-page/admin-page.component';
+// import { CakeCategoryComponent } from './components/pages/cake-category/cake-category.component';
+// import { AdminNavigationBarComponent } from './components/parts/admin-navigation-bar/admin-navigation-bar.component';
+// import { CakeCreateComponent } from './components/pages/cake-create/cake-create.component';
 
 
 @NgModule({
@@ -33,11 +42,19 @@ import { NgxUsefulSwiperModule } from 'ngx-useful-swiper'
     CompntsComponent,
     FooterComponent,
     MainSliderComponent,
+    CallbackFormComponent,
+    // AdminPageComponent
+    // AdminPageComponent,
+    // AuthComponent,
+    // CakeCategoryComponent,
+    // AdminNavigationBarComponent,
+    // CakeCreateComponent ,
   ],
   imports: [
     BrowserModule,
     GoogleMapsModule,
     NgxUsefulSwiperModule,
+    FormsModule,
     AppRoutingModule,
   ],
   providers: [],
