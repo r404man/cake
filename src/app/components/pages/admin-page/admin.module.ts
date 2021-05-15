@@ -7,6 +7,7 @@ import { CakeCreateComponent } from '../cake-create/cake-create.component';
 import { FormsModule } from '@angular/forms';
 import { AdminPageComponent } from './admin-page.component';
 import { CmpCreateComponent } from '../cmp-create/cmp-create.component';
+import { CattegoryCardComponent } from '../../parts/cattegory-card/cattegory-card.component';
 
 const routing = RouterModule.forChild([
   { path: 'auth', component: AuthComponent },
@@ -25,7 +26,8 @@ const routing = RouterModule.forChild([
     AuthComponent,
     CakeCategoryComponent,
     CakeCategoryComponent,
-    AdminPageComponent
+    AdminPageComponent,
+    CattegoryCardComponent,
   ],
   imports: [
     FormsModule,

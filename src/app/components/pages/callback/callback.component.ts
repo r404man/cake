@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { ReviewService } from 'src/app/services/review.service';
 
 @Component({
   selector: 'app-callback',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CallbackComponent implements OnInit {
 
-  constructor() { }
+  constructor(private reviewService: ReviewService) { }
 
-  ngOnInit(): void {
-  }
+  reviews = [];
+
+getReviews() {
+  this.reviewService.getReviews().subscribe(
+    data => {
+      this.reviews = data.map(val => val.payload.doc.data());
+    }
+  );
+}
+
+ngOnInit(): void {
+  this.getReviews();
+}
 
 }

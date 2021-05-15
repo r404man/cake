@@ -1,1 +1,17 @@
-<p>cattegory-card works!</p>
+<div class="category-item row">
+    <div class="category__img col-md-2" *ngIf='categoryThumbUrl != null; else loader'>
+        <img src="{{categoryThumbUrl}}" alt="">
+    </div>
+    <div class="category__title col-md-4">
+        {{item.title}}
+    </div>
+    <div class="category__btn col-md-6">
+        <a class="col-md-4 admin-link" (click)='categoryDelete(item.id)'>Удалить</a>
+        <a class="col-md-4 admin-link">Редактировать</a>
+    </div>
+</div>
+
+
+<ng-template #loader>
+    ...load
+</ng-template>

@@ -1,0 +1,36 @@
+.category-item {
+    display: flex;
+    align-items: center;
+    border: 1px solid #cecece;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    color: black;
+
+    .category__btn {
+        display: flex;
+        a {
+            margin: 0px 10px;
+        }
+        // justify-content: space-between;
+    }
+
+    .category__title {
+        font-weight: 700;
+        font-size: 22px;
+    }
+
+    .category__img {
+        display: flex;
+        width: 15%;
+        margin-right: 10px;
+        padding-left: 0px;
+        height: 100px;
+        overflow: hidden;
+        img {
+            border-top-left-radius: 6px;
+            border-bottom-left-radius: 6px;
+            // height: auto;
+            width: 100%;
+        }
+    }
+}
