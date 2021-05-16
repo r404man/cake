@@ -8,7 +8,7 @@ import { CakeService } from 'src/app/services/cake.service';
   styleUrls: ['./cattegory-card.component.scss']
 })
 export class CattegoryCardComponent implements OnInit {
-  @Input() item;
+  @Input() item = null;
 
   categoryThumbUrl: string = null;
 
@@ -24,8 +24,7 @@ export class CattegoryCardComponent implements OnInit {
   }
 
   categoryDelete(id: string) {
-    console.log(id)
-    this.categoryService.deleteCategory(id);
+    this.categoryService.deleteCategory(this.item.docId, this.item.id);
   }
 
   ngOnInit(): void {

@@ -1,5 +1,5 @@
-<div class="category-item row">
-    <div class="category__img col-md-2" *ngIf='categoryThumbUrl != null; else loader'>
+<div class="category-item row" *ngIf='item != null; else load'>
+    <div class="category__img col-md-2" *ngIf='categoryThumbUrl != null; else load'>
         <img src="{{categoryThumbUrl}}" alt="">
     </div>
     <div class="category__title col-md-4">
@@ -11,7 +11,6 @@
     </div>
 </div>
 
-
-<ng-template #loader>
-    ...load
+<ng-template #load>
+    <app-temp-load></app-temp-load>
 </ng-template>

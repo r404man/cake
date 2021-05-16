@@ -12,12 +12,6 @@ export class AdminPageComponent implements OnInit {
   constructor(private router: Router, private authService: AuthService) { }
 
   ngOnInit(): void {
-    console.log('x')
-    // if(this.authService.isAuth) {
-      
-    // } else {
-    //   this.router.navigateByUrl('/main')
-    // }
   }
 
 }

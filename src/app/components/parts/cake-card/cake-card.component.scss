@@ -1,0 +1,21 @@
+.cake__image {
+    display: flex;
+    height: 150px;
+    img {
+        object-fit: cover;
+        width: 100%;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+    }
+}
+.cake-info {
+    padding-left: 5px;
+}
+
+.cake__title {
+    font-weight: 700;
+    font-size: 19px;
+}
+.cake-item {
+    padding: 25px 15px;
+}

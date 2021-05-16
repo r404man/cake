@@ -1,30 +1,39 @@
 <div class="cake">
     <div class="cake-part-x row">
-
         <div class="cake-form col-md-6">
-            <form #form (submit)='cakeCreate(form)'>
+            <form #form='ngForm' (submit)='cakeCreate(form)'>
                 <div class="form-title title">
                     Форма добавления торта
                 </div>
                 <div class="form-group">
                     <label for="">Название</label>
-                    <input type="text" class="form-control" ngModel required>
+                    <input type="text" name="name" class="form-control" ngModel required>
                 </div>
                 <div class="form-group">
                     <label for="">Категория</label>
-                    <select name="category" class="form-select" ngModel required>
-                        <option value="">1</option>
-                        <option value="">2</option>
-                        <option value="">3</option>
+                    <select name="category" class="form-select" ngModel required *ngIf='categories != null'>
+                        <option value='{{category.title}}' *ngFor='let category of categories'>{{category.title}}
+                        </option>
+                        <!-- <option value="">2</option> -->
+                        <!-- <option value="">3</option> -->
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="">Состав</label>
-                    <textarea name="sostav" class="form-control" cols="30" rows="2" ngModel required></textarea>
+                   
+                    <textarea 
+                    name="sostav" 
+                    class="form-control" 
+                    cols="30" rows="2" 
+                    placeholder="Во время добавления состава используйте ; в
+                    качестве разделителя" 
+                    ngModel 
+                    required></textarea>
+                    
                 </div>
                 <div class="form-group file">
                     <label for="">Изображение</label>
-                    <input type="file" name="cake_img" accept=".png, .jpg">
+                    <input type="file" name="cake_img" accept=".png, .jpg" (change)='cakeThumb($event)'>
                 </div>
                 <div class="form-group">
                     <button class="btn btn-primary" type="submit">Создать</button>
@@ -62,8 +71,9 @@
             Во время добавления состава используйте <span>;</span> в качестве разделителя
         </div>
     </div>
-    <div class="cake-list col-md-12 row">
-        <div class="cake-item col-md-4">
+    <div class="cake-list col-md-12 row" *ngIf='cakes != null'>
+        <app-cake-card class="col-md-4" *ngFor='let item of cakes' [cake]='item' [docId]='item.docId'></app-cake-card>
+        <!-- <div class="cake-item col-md-4">
             <div class="cake__image">
                 <img src="../../../../assets/main-slider/3.jpg" alt="">
             </div>
@@ -86,6 +96,30 @@
                     <a class="admin-link">Редактировать</a>
                 </div>
             </div>
-        </div>
+        </div> -->
+        <!-- <div class="cake-item col-md-4">
+            <div class="cake__image">
+                <img src="../../../../assets/main-slider/3.jpg" alt="">
+            </div>
+            <div class="cake-info">
+                <div class="cake__title">
+                    Наполеон
+                </div>
+                <div class="cake__category">
+                    Десткий торт
+                </div>
+                <div class="cake__detail">
+                    <ul>
+                        <li>Вода</li>
+                        <li>Мука</li>
+                        <li>Яйцо</li>
+                    </ul>
+                </div>
+                <div class="cake__part">
+                    <a class="admin-link">Удалить</a>
+                    <a class="admin-link">Редактировать</a>
+                </div>
+            </div>
+        </div> -->
     </div>
 </div>

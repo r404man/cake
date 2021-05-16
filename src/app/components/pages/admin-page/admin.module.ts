@@ -8,6 +8,9 @@ import { FormsModule } from '@angular/forms';
 import { AdminPageComponent } from './admin-page.component';
 import { CmpCreateComponent } from '../cmp-create/cmp-create.component';
 import { CattegoryCardComponent } from '../../parts/cattegory-card/cattegory-card.component';
+import { TempLoadComponent } from '../../parts/temp-load/temp-load.component';
+import { CakeCardComponent } from '../../parts/cake-card/cake-card.component';
+import { CategoryModule } from '../../parts/cattegory-card/category.module';
 
 const routing = RouterModule.forChild([
   { path: 'auth', component: AuthComponent },
@@ -24,14 +27,17 @@ const routing = RouterModule.forChild([
 @NgModule({
   declarations: [
     AuthComponent,
+    // CattegoryCardComponent,
     CakeCategoryComponent,
-    CakeCategoryComponent,
+    CakeCreateComponent,
     AdminPageComponent,
-    CattegoryCardComponent,
+    TempLoadComponent,
+    CakeCardComponent,
   ],
   imports: [
-    FormsModule,
+    CategoryModule,
     CommonModule,
+    FormsModule,
     routing,
   ],
   exports: []

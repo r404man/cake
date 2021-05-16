@@ -1,1 +1,29 @@
-<p>cake-card works!</p>
+<div class="cake-item" *ngIf='cake != null; else load'>
+    <div class="cake__image" *ngIf='cakeThumbUrl != null; else load'>
+        <img src="{{cakeThumbUrl}}" alt="">
+        <!-- <img src="../../../../assets/main-slider/3.jpg" alt=""> -->
+    </div>
+    <div class="cake-info">
+        <div class="cake__title">
+            {{cake.name}}
+        </div>
+        <div class="cake__category">
+            {{cake.category}}
+        </div>
+        <div class="cake__detail">
+            <ul>
+                <li *ngFor='let part of cakeCmp'>{{part}}</li>
+                <!-- <li>Мука</li> -->
+                <!-- <li>Яйцо</li> -->
+            </ul>
+        </div>
+        <div class="cake__part">
+            <a class="admin-link" (click)='cakeDelete(docId)'>Удалить</a>
+            <a class="admin-link">Редактировать</a>
+        </div>
+    </div>
+</div>
+
+<ng-template #load>
+    <app-temp-load></app-temp-load>
+</ng-template>

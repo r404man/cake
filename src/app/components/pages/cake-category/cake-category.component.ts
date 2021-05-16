@@ -35,25 +35,29 @@ export class CakeCategoryComponent implements OnInit {
     this.cakeService.percentage.subscribe(
       val => {
         this.percentage = val;
+        if(val === 100) {
+          this.getCategories();
+        }
       }
     )
   }
 
 
-  categoryDelete(id: string) {
-    console.log(id, 'delete')
-  }
-
   getCategories() {
     this.cakeService.getCategories().subscribe(
       data => {
         // console.log(data);
-        this.categories = data.map(val => val.payload.doc.data());
-        console.log(this.categories);
+        // console.log(this.categories);
+        this.categories = data.map((val) => {
+          return {
+            docId: val.payload.doc.id,
+            ...val.payload.doc.data() as Object,
+          }
+        });
       }
     );
   }
-  
+
   ngOnInit(): void {
     this.getCategories();
     // console.log(this.categories)

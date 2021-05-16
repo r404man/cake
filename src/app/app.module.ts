@@ -6,6 +6,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
 
+import { CategoryModule } from './components/parts/cattegory-card/category.module'
 
 import { AppComponent } from './app.component';
 import { NavigationBarComponent } from './components/parts/navigation-bar/navigation-bar.component';
@@ -23,6 +24,8 @@ import { GoogleMapsModule } from '@angular/google-maps';
 import { CmpCreateComponent } from './components/pages/cmp-create/cmp-create.component';
 import { CallbackFormComponent } from './components/parts/callback-form/callback-form.component';
 import { MainSliderComponent } from './components/parts/main-slider/main-slider.component';
+import { TempLoadComponent } from './components/parts/temp-load/temp-load.component';
+import { MainCategoryCardComponent } from './components/parts/main-category-card/main-category-card.component';
 
 // import { AdminModule } from './components/pages/admin-page/admin.module';
 // import { AdminPageComponent } from './components/pages/admin-page/admin-page.component';
@@ -37,8 +40,8 @@ import { MainSliderComponent } from './components/parts/main-slider/main-slider.
   declarations: [
     AppComponent,
     NavigationBarComponent,
-    CakeCardComponent,
-    CakeDetailComponent,
+    // CakeCardComponent,
+    // CakeDetailComponent,
     ContactsComponent,
     HeaderComponent,
     MainPageComponent,
@@ -48,6 +51,8 @@ import { MainSliderComponent } from './components/parts/main-slider/main-slider.
     MainSliderComponent,
     CallbackFormComponent,
     CmpCreateComponent,
+    MainCategoryCardComponent,
+    // TempLoadComponent,
     // CattegoryCardComponent,
     // AdminPageComponent
     // AdminPageComponent,
@@ -57,6 +62,7 @@ import { MainSliderComponent } from './components/parts/main-slider/main-slider.
     // CakeCreateComponent ,
   ],
   imports: [
+    CategoryModule,
     BrowserModule,
     GoogleMapsModule,
     NgxUsefulSwiperModule,

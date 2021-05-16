@@ -6,8 +6,17 @@
         <h1 class="title">Категории</h1>
     </div>
     <div class="main-cattegory">
-        <div class="category-list">
-            <a href="" class="category">
+        <div class="category-list row">
+            <app-main-category-card class="col-md-4" *ngFor='let category of categories' [category]='category'></app-main-category-card>
+           
+            <!-- 
+            <a href="" class="category" *ngFor='let category of categories'>
+                <div class="category__title title">{{category.title}}</div>
+                <div class="h_shadow"></div>
+                <img src="../../../../assets/category.jpeg" alt=""> -->
+            <!-- </a> -->
+
+            <!-- <a href="" class="category">
                 <div class="category__title title">Детские торты</div>
                 <div class="h_shadow"></div>
                 <img src="../../../../assets/category.jpeg" alt="">
@@ -26,12 +35,7 @@
                 <div class="category__title title">Детские торты</div>
                 <div class="h_shadow"></div>
                 <img src="../../../../assets/category.jpeg" alt="">
-            </a>
-            <a href="" class="category">
-                <div class="category__title title">Детские торты</div>
-                <div class="h_shadow"></div>
-                <img src="../../../../assets/category.jpeg" alt="">
-            </a>
+            </a> -->
         </div>
     </div>
     <div class="main-title">
