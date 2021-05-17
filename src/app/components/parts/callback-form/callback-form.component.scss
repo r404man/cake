@@ -35,3 +35,18 @@ textarea:focus {
         }
     }
 }
+
+@media screen and (max-width: 600px){
+    .callback {
+        margin-bottom: 20px;
+        padding: 10px 10px;
+    }
+    .form-group {
+        .btn {
+            font-size: 18px !important;
+        }
+        &:last-child {
+            margin-bottom: 10px;
+        }
+    }
+}

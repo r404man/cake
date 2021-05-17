@@ -35,3 +35,32 @@ form {
         margin: 0 auto;
     }
 }
+
+@media screen and (max-width:600px){
+    .cake-part-x {
+        padding: 0;
+        margin: 0;
+    }
+    .cake {
+        padding: 0 10px;
+    }
+    form {
+        margin-top: 25px;
+        padding: 5px 7px;
+        font-size: 18px;
+    }
+    .cake-form {
+        padding: 0;
+        margin-bottom: 10px;
+    }
+    .btn {
+        font-size: 18px;
+    }
+    .instruction {
+        padding-top: 7px;
+    }
+    .cake-list {
+        margin: 0;
+        padding: 0;
+    }
+}

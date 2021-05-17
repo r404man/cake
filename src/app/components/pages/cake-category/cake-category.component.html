@@ -1,4 +1,4 @@
-<div class="category row">
+<div class="category">
     <div class="category-form col-md-4">
         <form #categoryForm='ngForm' (submit)='category(categoryForm)'>
             <div class="category-progress">
@@ -27,8 +27,8 @@
         <div class="category-title title">
             Категории
         </div>
-        <app-cattegory-card *ngFor='let category of categories' [item]='category'></app-cattegory-card>
         <div class="list">
+        <app-cattegory-card *ngFor='let category of categories' [item]='category'></app-cattegory-card>
 
 
             <!-- <div class="category-item row" *ngFor='let category of categories'>

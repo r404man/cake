@@ -30,3 +30,23 @@ $hoverColor: #fa9e15;
         }
     }
 }
+@media screen and (max-width:600px){
+    .admin {
+        padding-top: 80px;
+    }
+    .navigation {
+        display: flex;
+        flex-direction: column;
+        padding: 0 10px;
+        text-align: left;
+
+
+        .admin-link {
+            margin: 0;
+            text-decoration: underline;
+            &::after {
+                display: none;
+            }
+        }
+    }
+}

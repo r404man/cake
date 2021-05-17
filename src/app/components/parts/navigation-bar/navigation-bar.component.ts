@@ -6,8 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navigation-bar.component.scss']
 })
 export class NavigationBarComponent implements OnInit {
-
+  showNav = false;
+  isOpen = false;
   constructor() { }
+
+  navToggler() {
+    this.showNav = !this.showNav;
+    this.isOpen = !this.isOpen;
+  }
 
   ngOnInit(): void {
   }

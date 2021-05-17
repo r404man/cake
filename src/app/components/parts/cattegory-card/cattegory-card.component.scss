@@ -35,3 +35,26 @@
         }
     }
 }
+
+
+@media screen and (max-width: 600px) {
+    :host {
+        margin-bottom: 10px;
+    }
+    .category-item {
+        padding-bottom: 10px;
+        width: 100%;
+        margin: 0;
+    }
+    .category__img {
+        padding: 0;
+        width: 100% !important;
+    }
+    .category__title {
+        padding-left: 10px;
+        margin-bottom: 5px;
+    }
+    .category__btn {
+        padding: 0;
+    }
+}

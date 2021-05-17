@@ -2,5 +2,5 @@
     <div class="category__title title">{{category.title}}</div>
     <span class="more">Подробнее</span>
     <div class="h_shadow"></div>
-    <img src="{{thumbUrl}}" alt="">
+    <img src="{{thumbUrl}}" alt="" *ngIf="thumbUrl != null">
 </a>

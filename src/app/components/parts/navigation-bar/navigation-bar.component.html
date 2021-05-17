@@ -1,7 +1,20 @@
-<nav>
-    <a class="nav__link" routerLink='/main'>Торты</a>
-    <a class="nav__link" routerLink='/components'>Начинки</a>
-    <a class="nav__link" routerLink='/contacts'>Контакты</a>
-    <a class="nav__link" routerLink='/admin'>Добавить</a>
-    <a class="nav__link" routerLink='/callback'>Отзывы</a>
+<!-- <nav class="navbar" id="navbarTogglerDemo01">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+        aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon">xxxxx</span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    </div>
+  </nav> -->
+
+<span id="menuBtn" (click)='navToggler()' [ngClass]='{isOpen: isOpen}'>Меню</span>
+
+<nav id="navBar" [ngClass]='{showNav: showNav}'>
+
+  <a class="nav__link" routerLink='/main' (click)='navToggler()'>Торты</a>
+  <a class="nav__link" routerLink='/components' (click)='navToggler()'>Начинки</a>
+  <a class="nav__link" routerLink='/contacts' (click)='navToggler()'>Контакты</a>
+  <a class="nav__link" routerLink='/admin' (click)='navToggler()'>Добавить</a>
+  <a class="nav__link" routerLink='/callback' (click)='navToggler()'>Отзывы</a>
+
 </nav>

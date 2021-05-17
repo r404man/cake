@@ -6,36 +6,12 @@
         <h1 class="title">Категории</h1>
     </div>
     <div class="main-cattegory">
-        <div class="category-list row">
-            <app-main-category-card class="col-md-4" *ngFor='let category of categories' [category]='category'></app-main-category-card>
-           
-            <!-- 
-            <a href="" class="category" *ngFor='let category of categories'>
-                <div class="category__title title">{{category.title}}</div>
-                <div class="h_shadow"></div>
-                <img src="../../../../assets/category.jpeg" alt=""> -->
-            <!-- </a> -->
+        <div class="category-list">
+            <div class="list">
 
-            <!-- <a href="" class="category">
-                <div class="category__title title">Детские торты</div>
-                <div class="h_shadow"></div>
-                <img src="../../../../assets/category.jpeg" alt="">
-            </a>
-            <a href="" class="category">
-                <div class="category__title title">Детские торты</div>
-                <div class="h_shadow"></div>
-                <img src="../../../../assets/category.jpeg" alt="">
-            </a>
-            <a href="" class="category">
-                <div class="category__title title">Детские торты</div>
-                <div class="h_shadow"></div>
-                <img src="../../../../assets/category.jpeg" alt="">
-            </a>
-            <a href="" class="category">
-                <div class="category__title title">Детские торты</div>
-                <div class="h_shadow"></div>
-                <img src="../../../../assets/category.jpeg" alt="">
-            </a> -->
+                <app-main-category-card *ngFor='let category of categories' [category]='category'>
+                </app-main-category-card>
+            </div>
         </div>
     </div>
     <div class="main-title">
@@ -94,8 +70,7 @@
             <div class="contacts-title">
                 <h1 class="title">Контакты</h1>
             </div>
-            <div class="row">
-
+            <div class="">
                 <div class="col-md-3 contacts-info">
                     <span class="brand">Leila Cakebery</span>
                     <span class="address">
@@ -111,7 +86,9 @@
                                 </a>
                             </div>
                         </div>
-                        <br><span class="mail">leila-cakebery.guest@gmail.com</span>
+                        <div class="mail">
+                            <span class="mail">leila-cakebery.guest@gmail.com</span>
+                        </div>
                         Обучение<br>
                         <b> +7 777 55-41-94</b>
                         <div class="whatsappContactPage">
@@ -121,7 +98,9 @@
                                 </a>
                             </div>
                         </div>
-                        <br><span class="mail">leila-cakebery.guest@gmail.com</span>
+                        <div class="mail">
+                            <span class="mail">leila-cakebery.guest@gmail.com</span>
+                        </div>
                     </span>
                 </div>
                 <div class="col-md-9 map" id="map">

@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 import { CategoryModule } from './components/parts/cattegory-card/category.module'
 
@@ -62,6 +63,7 @@ import { MainCategoryCardComponent } from './components/parts/main-category-card
     // CakeCreateComponent ,
   ],
   imports: [
+    BrowserAnimationsModule,
     CategoryModule,
     BrowserModule,
     GoogleMapsModule,

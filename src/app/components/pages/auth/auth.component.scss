@@ -19,3 +19,21 @@
     border-radius: 6px;
 }
 
+@media screen and (max-width: 600px){
+    .auth {
+        padding: 0px 10px;
+        margin-top: 80px;
+        form {
+            width: 100%;
+            .form-group {
+                &:last-child {
+                    margin-bottom: 10px;
+                }
+            }
+            .btn {
+                font-size: 18px;
+
+            }
+        }
+    }
+}

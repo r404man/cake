@@ -16,3 +16,18 @@
         padding: 10px 15px;
     }
 }
+
+@media screen and (max-width:600px){
+    .category {
+        padding: 0 10px;
+        margin-top: 20px;
+    }
+    .category-form {
+    }
+    .list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+}

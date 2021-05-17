@@ -1,5 +1,7 @@
 .call-back {
     padding: 30px 0px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .call-back-title {
@@ -21,5 +23,35 @@
             font-weight: 700;
         }
     }
+    .message__text {
+        width: 100%;
+        word-break: normal;
+    }
 }
 
+@media screen and (max-width: 600px) {
+    .call-back {
+        margin-top: 80px;
+        padding: 10px 10px;
+        flex-direction: column;
+    }
+    .call-back-title {
+        padding: 0px 10px;
+    }
+    .message__date {
+        font-size: 15px;
+        width: 40%;
+    }
+    .message__name {
+        font-size: 16px;
+    }
+
+    .message__text {
+        font-size: 18px;
+    }
+    .message__detail {
+        display: flex;
+        align-items: center;
+        // justify-content: space-between;
+    }
+}

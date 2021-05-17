@@ -14,46 +14,4 @@
 <body>
   <app-root></app-root>
 </body>
-
-
-<!-- <script src="https://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script> -->
-<!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZtGdHltH5p6rAascqSADldWASAi_-EBk&callback=initMap"
-type="text/javascript"></script> -->
-
-
-
-<script>
-  var addresses = [
-    'Костанай, ',
-    'Казахстан, ',
-    '53.199839, 63.615561'
-  ];
-
-  ymaps.ready(init);
-
-  function init() {
-
-    var map = new ymaps.Map('map', {
-      center: [55.76, 37.64],
-      zoom: 11,
-      behaviors: ['default', 'scrollZoom'],
-      controls: ['mapTools']
-    });
-    function addLabel(map, addr) {
-      var geocoder = new ymaps.geocode(addr, { results: 1 });
-      geocoder.then(function (res) {
-        var gob = res.geoObjects.get(0);
-        gob.properties.set('iconContent', "Название");
-        gob.options.set('preset', "twirl#blueDotIcon");
-        gob.options.set('balloonContentHeader', "test");
-        map.geoObjects.add(gob);
-      });
-    }
-    for (var i = 0; i < addresses.length; ++i) {
-      addLabel(map, addresses[i]);
-    }
-  }
-</script>
-
-
 </html>

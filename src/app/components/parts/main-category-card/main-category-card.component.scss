@@ -61,6 +61,7 @@
     background-color: rgba(0, 0, 0, 0.199);
     z-index: 1;
     transition: 0.3s ease-in-out;
+    border-radius: 6px;
 }
 
 .info-text {
@@ -70,4 +71,16 @@
 
 .title {
     margin-bottom: 30px;
+}
+
+@media screen and (max-width: 600px) {
+    :host {
+        margin-bottom: 15px;
+        &:last-child {
+            margin-bottom: 0px;
+        }
+    }
+    .category__title {
+        font-size: 18px;
+    }
 }

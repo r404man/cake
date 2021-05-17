@@ -1,4 +1,4 @@
-$hoverColor: #FA9E15;
+$hoverColor: #fa9e15;
 
 .nav__link {
     margin-right: 30px;
@@ -16,7 +16,7 @@ $hoverColor: #FA9E15;
         position: absolute;
         bottom: 0;
         left: 0;
-        transition: .3s ease-in-out;
+        transition: 0.3s ease-in-out;
     }
     &:hover {
         color: $hoverColor;
@@ -26,5 +26,43 @@ $hoverColor: #FA9E15;
     }
     &:last-child {
         margin-right: 0px;
+    }
+}
+
+nav {
+    text-align: right;
+}
+@media screen and (max-width: 600px) {
+    :host {
+        text-align: right;
+    }
+    nav {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        background-color: #fff;
+        height: 0vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        padding-left: 10px;
+        overflow: hidden;
+        transition: 0.3s ease-in-out;
+        .nav__link {
+            margin: 0;
+        }
+    }
+    //For nav displaying
+    .showNav {
+        height: 100vh;
+    }
+
+    span {
+        transition: .3s ease-in-out;
+    }
+    .isOpen {
+        text-decoration: underline;
+        color: #fa9e15;
     }
 }

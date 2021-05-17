@@ -1,7 +1,6 @@
 .brand {
     font-weight: 700;
     color: #000;
-
 }
 
 .contacts-title {
@@ -26,4 +25,18 @@ a {
 .contacts-info {
     display: flex;
     flex-direction: column;
+}
+
+@media screen and (max-width: 600px){
+    .contacts-info {
+        display: flex;
+        padding: 0px 10px;
+    }
+    #map {
+        // display: none;
+        height: 300px;
+    }
+    .contacts {
+        padding: 0px 10px;
+    }
 }
