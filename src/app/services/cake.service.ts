@@ -79,4 +79,8 @@ export class CakeService {
     return this.firestore.collection('cakes').doc(id).get();
   }
 
+  editCake(id: string, data) {
+    return this.firestore.collection('cakes').doc(id).set(data);
+  }
+
 }

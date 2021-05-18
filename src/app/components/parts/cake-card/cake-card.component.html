@@ -19,7 +19,22 @@
         </div>
         <div class="cake__part">
             <a class="admin-link" (click)='cakeDelete(docId)'>Удалить</a>
-            <a class="admin-link">Редактировать</a>
+            <a class="admin-link" (click)='edit()'>Редактировать</a>
+            <div class="edit-form" [ngClass]='{formVisible: isEdit}'>
+                <form #form='ngForm' (submit)='editCake(form)'>
+                    <div class="form-title">
+                        Форма редактирования
+                    </div>
+                    <div class="cake-allert">
+                        {{allert}}
+                    </div>
+                    <input ngModel='{{cake.name}}' type="text" class="form-control" name="name" value="{{cake.name}}">
+                    <input ngModel='{{cake.sostav}}' type="text" class="form-control" name="sostav" value="{{cake.sostav}}">
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Сохранить</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </div>

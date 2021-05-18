@@ -19,3 +19,27 @@
 .cake-item {
     padding: 25px 15px;
 }
+
+.formVisible {
+    display: block !important;
+}
+
+.edit-form {
+    display: none;
+    .form-title {
+        margin-bottom: 7px;
+    }
+    margin: 10px 0px;
+    padding: 0px 5px;
+    border-radius: 6px;
+    border: 1px solid #cecece;
+
+    form {
+        input {
+            margin-bottom: 7px;
+        }
+        .btn {
+            font-size: 18px;
+        }
+    }
+}
