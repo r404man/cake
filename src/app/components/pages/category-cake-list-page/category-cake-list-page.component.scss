@@ -1,0 +1,27 @@
+.category-cake-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & > * {
+        width: 33.333%;
+        height: 300px;
+        padding: 10px 10px;
+    }
+}
+
+@media screen and (max-width:600px){
+    .current-title {
+        padding: 0px 10px;
+    }
+    .currentCategory {
+        padding-top: 80px;
+    }
+        .category-cake-list {
+            flex-direction: column;
+            &>* {
+                width: 100%;
+                height: 200px;
+            }
+        }
+}

@@ -1,4 +1,7 @@
 $hoverColor: #fa9e15;
+.menuBtn {
+    display: none;
+}
 
 .nav__link {
     margin-right: 30px;
@@ -50,7 +53,8 @@ nav {
         overflow: hidden;
         transition: 0.3s ease-in-out;
         .nav__link {
-            margin: 0;
+            margin: 10px 0px;
+
         }
     }
     //For nav displaying
@@ -58,8 +62,9 @@ nav {
         height: 100vh;
     }
 
-    span {
-        transition: .3s ease-in-out;
+    .menuBtn {
+        display: block;
+        transition: 0.3s ease-in-out;
     }
     .isOpen {
         text-decoration: underline;

@@ -31,6 +31,10 @@ export class CakeService {
     return this.firestore.collection('categories').snapshotChanges();
   }
 
+  getCategory(id:string) {
+    return this.firestore.collection('categories').doc(id).get();
+  }
+
   getCategoryThumbs() {
     return this.firestorage.refFromURL(`gs://leila-bakery.appspot.com/categories/`).listAll();
   }
@@ -65,11 +69,14 @@ export class CakeService {
     return this.task.percentageChanges();
   }
 
-  cakeDelete(id:string, imgId: string) {
+  cakeDelete(id: string, imgId: string) {
     // console.log(id, imgId);
     this.firestorage.refFromURL(`gs://leila-bakery.appspot.com/cakes/${imgId}`).delete();
     return this.firestore.collection('cakes').doc(id).delete();
   }
 
+  getCake(id:string) {
+    return this.firestore.collection('cakes').doc(id).get();
+  }
 
 }

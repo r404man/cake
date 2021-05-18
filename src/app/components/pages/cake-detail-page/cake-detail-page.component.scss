@@ -1,0 +1,85 @@
+.cake {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.cake-bery-info {
+    margin-top: 30px;
+}
+
+.info-block {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 18px;
+    svg {
+        width: 25px;
+        height: 25px;
+        margin-right: 1em;
+    }
+}
+
+.cake-image {
+    display: flex;
+    width: 55%;
+    height: 600px;
+    img {
+        border-radius: 6px;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+}
+
+.cake-detail {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 3em;
+    .cake-title {
+        font-size: 22px;
+        color: #fa9e15;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+    .cake-category {
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    .cake-info {
+        li {
+            font-size: 18px;
+            margin-bottom: 7px;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .cake {
+        padding-top: 80px;
+        flex-direction: column;
+    }
+    .cake-image {
+        width: 100%;
+        padding: 0px 10px;
+        height: 260px;
+        margin-bottom: 15px;
+    }
+    .cake-detail {
+        width: 100%;
+        padding: 0px 10px;
+    }
+    .cake-category {
+        font-size: 18px;
+    }
+    .cake-info {
+        li {
+            font-size: 16px !important;
+            color: #a5a5a5;
+        }
+    }
+    .info-text {
+        font-size: 16px;
+    }
+}

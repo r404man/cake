@@ -1,0 +1,110 @@
+.cake-card {
+    position: relative;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    height: 100%;
+    border-radius: 6px;
+}
+
+img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 6px;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    li {
+        z-index: 5;
+    }
+}
+
+.cake-detail {
+    z-index: 10;
+    width: 100%;
+    padding-left: 10px;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-shadow: 1px 1px 2px transparent, 0 0 1em black;
+    font-size: 20px;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+$hoverColor: #ffc107;
+span {
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+    color: $hoverColor;
+    font-weight: 700;
+    z-index: 10;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+.cake-card:hover span {
+    top: 85%;
+    opacity: 1;
+}
+
+.cake-card:hover .cake-detail {
+    opacity: 1;
+    top: 50%;
+}
+
+.cake-card:hover .cake-title {
+    top: 25%;
+}
+
+.h_shadow {
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.199);
+    z-index: 1;
+    transition: 0.3s ease-in-out;
+    border-radius: 6px;
+}
+
+.cake-title {
+    transition: 0.3s ease-in-out;
+    font-size: 25px;
+    text-shadow: 1px 1px 2px transparent, 0 0 1em black;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+    font-weight: 700;
+}
+
+@media screen and(max-width:600px) {
+    .cake-title {
+        font-size: 20px;
+    }
+    span {
+        opacity: 1;
+        top: 85%;
+        text-decoration: underline;
+    }
+    .cake-detail {
+        display: none;
+    }
+}

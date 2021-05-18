@@ -7,12 +7,12 @@
     </div>
   </nav> -->
 
-<span id="menuBtn" (click)='navToggler()' [ngClass]='{isOpen: isOpen}'>Меню</span>
+<span id="menuBtn" class="menuBtn" (click)='navToggler()' [ngClass]='{isOpen: isOpen}'>Меню</span>
 
 <nav id="navBar" [ngClass]='{showNav: showNav}'>
 
   <a class="nav__link" routerLink='/main' (click)='navToggler()'>Торты</a>
-  <a class="nav__link" routerLink='/components' (click)='navToggler()'>Начинки</a>
+  <!-- <a class="nav__link" routerLink='/components' (click)='navToggler()'>Начинки</a> -->
   <a class="nav__link" routerLink='/contacts' (click)='navToggler()'>Контакты</a>
   <a class="nav__link" routerLink='/admin' (click)='navToggler()'>Добавить</a>
   <a class="nav__link" routerLink='/callback' (click)='navToggler()'>Отзывы</a>

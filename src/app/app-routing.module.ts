@@ -6,10 +6,19 @@ import { ContactsComponent } from './components/pages/contacts/contacts.componen
 import { CompntsComponent } from './components/pages/compnts/compnts.component';
 import { CallbackComponent } from './components/pages/callback/callback.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CategoryCakeListPageComponent } from './components/pages/category-cake-list-page/category-cake-list-page.component';
+// import { CakeDetailComponent } from './components/pages/cake-detail/cake-detail.component';
+import { CakeDetailPageComponent } from './components/pages/cake-detail-page/cake-detail-page.component';
 
 const routes: Routes = [
   { path: 'main', component: MainPageComponent, data: { animation: 'MainPage' } },
-  // {path: 'main/:categoryId', component}
+  {
+    path: 'main/:categoryId', component: CategoryCakeListPageComponent, children: [
+      // { path: ':cakeId', component: CakeDetailPageComponent, pathMatch: 'full' },
+    ],
+  },
+  { path: 'main/:categoryId/:cakeId', component: CakeDetailPageComponent },
+  // { path: '/:cakeId', component: CakeDetailComponent },
   { path: 'components', component: CompntsComponent, data: { animation: 'PartsPage' } },
   { path: 'callback', component: CallbackComponent, data: { animation: 'CallBackPage' } },
   { path: 'contacts', component: ContactsComponent, data: { animation: 'ContactsPage' } },

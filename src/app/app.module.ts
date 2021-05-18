@@ -27,6 +27,10 @@ import { CallbackFormComponent } from './components/parts/callback-form/callback
 import { MainSliderComponent } from './components/parts/main-slider/main-slider.component';
 import { TempLoadComponent } from './components/parts/temp-load/temp-load.component';
 import { MainCategoryCardComponent } from './components/parts/main-category-card/main-category-card.component';
+import { CakeDetailPageComponent } from './components/pages/cake-detail-page/cake-detail-page.component';
+import { CategoryCakeListPageComponent } from './components/pages/category-cake-list-page/category-cake-list-page.component';
+import { MainCakeCardComponent } from './components/parts/main-cake-card/main-cake-card.component';
+import { OfferFormComponent } from './components/parts/offer-form/offer-form.component';
 
 // import { AdminModule } from './components/pages/admin-page/admin.module';
 // import { AdminPageComponent } from './components/pages/admin-page/admin-page.component';
@@ -53,7 +57,13 @@ import { MainCategoryCardComponent } from './components/parts/main-category-card
     CallbackFormComponent,
     CmpCreateComponent,
     MainCategoryCardComponent,
+    CakeDetailPageComponent,
+    CategoryCakeListPageComponent,
+    MainCakeCardComponent,
+    OfferFormComponent,
+    // CakeDetailComponent,
     // TempLoadComponent,
+
     // CattegoryCardComponent,
     // AdminPageComponent
     // AdminPageComponent,

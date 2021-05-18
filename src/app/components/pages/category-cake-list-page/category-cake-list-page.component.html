@@ -1,0 +1,11 @@
+<div class="currentCategory">
+    <div class="current-title title">
+        {{currentCategory}}
+    </div>
+    <div class="current-allert">
+        {{allert}}
+    </div>
+    <div class="category-cake-list" *ngIf='categoryCakes != null'>
+        <app-main-cake-card *ngFor='let cake of categoryCakes' [item]='cake' [docId]='cake.docId'></app-main-cake-card>
+    </div>
+</div>

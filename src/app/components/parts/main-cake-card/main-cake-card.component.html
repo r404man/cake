@@ -1,0 +1,13 @@
+<a routerLink='{{docId}}' class="cake-card">
+    <img src="{{cakeThumbUrl}}" alt="">
+    <div class="cake-title">
+        {{item.name}}
+    </div>
+    <div class="cake-detail">
+        <ul>
+            <li *ngFor='let comp of cakeCmp'>{{comp}}</li>
+        </ul>
+    </div>
+    <div class="h_shadow"></div>
+    <span class="cake-more">Подробнее</span>
+</a>
