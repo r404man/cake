@@ -11,6 +11,7 @@ import { CattegoryCardComponent } from '../../parts/cattegory-card/cattegory-car
 import { TempLoadComponent } from '../../parts/temp-load/temp-load.component';
 import { CakeCardComponent } from '../../parts/cake-card/cake-card.component';
 import { CategoryModule } from '../../parts/cattegory-card/category.module';
+import { OffersPageComponent } from '../offers-page/offers-page.component';
 
 const routing = RouterModule.forChild([
   { path: 'auth', component: AuthComponent },
@@ -18,7 +19,7 @@ const routing = RouterModule.forChild([
     path: 'main', component: AdminPageComponent, children: [
       { path: 'cake-category-create', component: CakeCategoryComponent },
       { path: 'cake-create', component: CakeCreateComponent },
-      { path: 'cmp-create', component: CmpCreateComponent },
+      { path: 'offers', component: OffersPageComponent },
     ]
   },
   { path: '**', redirectTo: '/admin/auth' }

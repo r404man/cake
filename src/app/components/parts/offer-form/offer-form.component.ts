@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { OfferService } from 'src/app/services/offer.service';
 
@@ -8,9 +8,10 @@ import { OfferService } from 'src/app/services/offer.service';
   styleUrls: ['./offer-form.component.scss']
 })
 export class OfferFormComponent implements OnInit {
+  @Input() cakeId: string = null;
   agree = true;
   allert: string = ''
-
+  isAllert: boolean = false;
   constructor(private offerService: OfferService) { }
 
   isAgree() {
@@ -22,16 +23,23 @@ export class OfferFormComponent implements OnInit {
   }
 
   offer(form: NgForm) {
-    let currentDate = date => date.toISOString().slice(0, 10);
-    currentDate = currentDate(new Date());
+    let { username, userphone, usermail } = form.value;
+    if (username.length < 3 && userphone.length < 3 && usermail.length < 3) {
+      this.isAllert = true;
+      this.allert = 'Введите корректные данные !';
+    } else {
+      let currentDate = date => date.toISOString().slice(0, 10);
+      currentDate = currentDate(new Date());
+      let data = { date: currentDate, offerObject: this.cakeId, ...form.value };
+      this.offerService.sendOffer(data).then(
+        () => {
+          this.isAllert = false;
+          this.allert = 'Ваша заявка принята!'
+          form.reset();
+        }
+      );
+    }
 
-    let data = { date: currentDate, ...form.value };
-    this.offerService.sendOffer(data).then(
-      () => {
-        this.allert = 'Ваша заявка принята!' 
-        form.reset();
-      }
-    );
   }
 
   ngOnInit(): void {

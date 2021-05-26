@@ -21,6 +21,9 @@ $hoverColor: #ffc107;
         padding: 10px 10px;
     } 
 }
+.contacts {
+    margin: 10px 0px;
+}
 
 @media screen and (max-width: 600px) {
     .main-title {
@@ -55,6 +58,7 @@ $hoverColor: #ffc107;
 
     .contacts {
         margin-top: 5px;
+        
         padding: 0px 10px;
     }
     .contacts-title {

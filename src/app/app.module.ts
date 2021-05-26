@@ -31,6 +31,9 @@ import { CakeDetailPageComponent } from './components/pages/cake-detail-page/cak
 import { CategoryCakeListPageComponent } from './components/pages/category-cake-list-page/category-cake-list-page.component';
 import { MainCakeCardComponent } from './components/parts/main-cake-card/main-cake-card.component';
 import { OfferFormComponent } from './components/parts/offer-form/offer-form.component';
+import { OffersPageComponent } from './components/pages/offers-page/offers-page.component';
+import { OfferCakeInfoComponent } from './components/parts/offer-cake-info/offer-cake-info.component';
+import { InfoPageComponent } from './components/pages/info-page/info-page.component';
 
 // import { AdminModule } from './components/pages/admin-page/admin.module';
 // import { AdminPageComponent } from './components/pages/admin-page/admin-page.component';
@@ -61,6 +64,9 @@ import { OfferFormComponent } from './components/parts/offer-form/offer-form.com
     CategoryCakeListPageComponent,
     MainCakeCardComponent,
     OfferFormComponent,
+    OffersPageComponent,
+    OfferCakeInfoComponent,
+    InfoPageComponent,
     // CakeDetailComponent,
     // TempLoadComponent,
 

@@ -3,6 +3,10 @@
     justify-content: center;
     .allert {
         color: green;
+
+        &.isAllert {
+            color: red !important;
+        }
     }
     form {
         border-radius: 6px;

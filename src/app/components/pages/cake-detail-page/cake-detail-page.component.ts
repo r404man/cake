@@ -12,6 +12,7 @@ export class CakeDetailPageComponent implements OnInit {
   cakeInfo: Cake = null;
   cakeThumbUrl: string = null;
   cakeCmp: string[] = null;
+  cakeId:string = null;
   constructor(private cakeService: CakeService, private route: ActivatedRoute) { }
 
   getCakeInfo() {
@@ -44,6 +45,7 @@ export class CakeDetailPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.getCakeInfo();
+    this.cakeId = this.route.snapshot.paramMap.get('cakeId');
   }
 
 }

@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CategoryCakeListPageComponent } from './components/pages/category-cake-list-page/category-cake-list-page.component';
 // import { CakeDetailComponent } from './components/pages/cake-detail/cake-detail.component';
 import { CakeDetailPageComponent } from './components/pages/cake-detail-page/cake-detail-page.component';
+import { InfoPageComponent } from './components/pages/info-page/info-page.component';
 
 const routes: Routes = [
   { path: 'main', component: MainPageComponent, data: { animation: 'MainPage' } },
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'components', component: CompntsComponent, data: { animation: 'PartsPage' } },
   { path: 'callback', component: CallbackComponent, data: { animation: 'CallBackPage' } },
   { path: 'contacts', component: ContactsComponent, data: { animation: 'ContactsPage' } },
+  { path: 'info', component: InfoPageComponent, data: { animation: 'ContactsPage' } },
   {
     path: 'admin', loadChildren: () => import('../app/components/pages/admin-page/admin.module')
       .then(m => m.AdminModule)

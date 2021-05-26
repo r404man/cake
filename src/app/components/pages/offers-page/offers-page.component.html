@@ -1,0 +1,37 @@
+<div class="offer-page">
+    <div class="container">
+        <div class="offer-page__inner">
+            <div class="offer-page-title title">
+                Заявки
+            </div>
+            <div class="offer-page-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="name">Имя</th>
+                            <th class="phone">Телефон</th>
+                            <th class="mail">Почта</th>
+                            <th class="date">Дата заявки</th>
+                            <th class="details">Объект заявки</th>
+                            <th class="controls">Управление</th>
+                        </tr>
+                    </thead>
+                    <tbody *ngIf='offers != null'>
+                        <tr *ngFor='let offer of offers'>
+                            <td>{{offer.username}}</td>
+                            <td>{{offer.userphone}}</td>
+                            <td>{{offer.usermail}}</td>
+                            <td>{{offer.date}}</td>
+                            <td>
+                                <app-offer-cake-info [offerCakeKey]='offer.offerObject'></app-offer-cake-info>
+                            </td>
+                            <td>
+                                <a class="ctr-btn" (click)='deleteOffer(offer.id)'>Удалить заявку</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
