@@ -12,13 +12,13 @@ import { CakeDetailPageComponent } from './components/pages/cake-detail-page/cak
 import { InfoPageComponent } from './components/pages/info-page/info-page.component';
 
 const routes: Routes = [
-  { path: 'main', component: MainPageComponent, data: { animation: 'MainPage' } },
+  { path: '', component: MainPageComponent, data: { animation: 'MainPage' } },
   {
-    path: 'main/:categoryId', component: CategoryCakeListPageComponent, children: [
+    path: 'category/:categoryId', component: CategoryCakeListPageComponent, children: [
       // { path: ':cakeId', component: CakeDetailPageComponent, pathMatch: 'full' },
     ],
   },
-  { path: 'main/:categoryId/:cakeId', component: CakeDetailPageComponent },
+  { path: 'category/:categoryId/:cakeId', component: CakeDetailPageComponent },
   // { path: '/:cakeId', component: CakeDetailComponent },
   { path: 'components', component: CompntsComponent, data: { animation: 'PartsPage' } },
   { path: 'callback', component: CallbackComponent, data: { animation: 'CallBackPage' } },
@@ -28,7 +28,7 @@ const routes: Routes = [
     path: 'admin', loadChildren: () => import('../app/components/pages/admin-page/admin.module')
       .then(m => m.AdminModule)
   },
-  { path: '**', redirectTo: '/main' },
+  { path: '**', redirectTo: '/' },
 ]
 
 @NgModule({

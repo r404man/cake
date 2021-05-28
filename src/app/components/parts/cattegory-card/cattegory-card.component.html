@@ -1,6 +1,6 @@
 <div class="category-item row" *ngIf='item != null; else load'>
     <div class="category__img col-md-2" *ngIf='categoryThumbUrl != null; else load'>
-        <img src="{{categoryThumbUrl}}" alt="">
+        <img src="{{categoryThumbUrl}}" width="400" height="280" alt="Category card image">
     </div>
     <div class="category__title col-md-4">
         {{item.title}}
