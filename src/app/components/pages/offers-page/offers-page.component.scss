@@ -12,6 +12,7 @@
             padding: 10px 10px;
             tr > th {
                 color: #4e4e4e;
+                padding: 0px 10px;
                 &.name {
                     width: 150px;
                 }
@@ -19,7 +20,7 @@
                     width: 200px;
                 }
                 &.mail {
-                    width: 150px;
+                    width: 200px;
                 }
                 &.date {
                     width: 150px;
@@ -36,6 +37,8 @@
             tr > td {
                 padding-bottom: 10px;
                 border-bottom: 1px solid #ceecee;
+                word-break: break-word;
+                padding: 0px 10px;
             }
         }
     }

@@ -34,6 +34,7 @@ import { OfferFormComponent } from './components/parts/offer-form/offer-form.com
 import { OffersPageComponent } from './components/pages/offers-page/offers-page.component';
 import { OfferCakeInfoComponent } from './components/parts/offer-cake-info/offer-cake-info.component';
 import { InfoPageComponent } from './components/pages/info-page/info-page.component';
+import { NgxMaskModule } from 'ngx-mask';
 
 // import { AdminModule } from './components/pages/admin-page/admin.module';
 // import { AdminPageComponent } from './components/pages/admin-page/admin-page.component';
@@ -87,7 +88,9 @@ import { InfoPageComponent } from './components/pages/info-page/info-page.compon
     FormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
+    NgxMaskModule.forRoot(),
     AppRoutingModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

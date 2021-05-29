@@ -21,6 +21,17 @@ a {
         color: $titleColor;
     }
 }
+.info-det {
+    display: flex;
+    flex-direction: column;
+    .phone {
+        display: flex;
+        flex-direction: column;
+        .mail {
+            margin-bottom: 15px;
+        }
+    }
+}
 
 .contacts-info {
     display: flex;
