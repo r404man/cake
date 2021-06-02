@@ -19,7 +19,15 @@ export class CategoryCakeListPageComponent implements OnInit {
   getCategoryCakes() {
     this.cakeService.getCakes().subscribe(
       data => {
-        // this.categoryCakes = data.filter((val) => {
+        data.map((val) => {
+          let item = { docId: val.payload.doc.id, ...val.payload.doc.data() as Cake };
+          if (this.currentCategory === item.category) {
+            this.categoryCakes.push(item);
+          } else {
+            return;
+          }
+        })
+      // this.categoryCakes = data.filter((val) => {
         //   let item = val.payload.doc.data() as Cake;
         //   // let item = { docId: val.payload.doc.id, ...val.payload.doc.data() as Cake };
         //   if (item.category === this.currentCategory) {
@@ -29,16 +37,6 @@ export class CategoryCakeListPageComponent implements OnInit {
         //     };
         //   }
         // })
-
-        data.map((val) => {
-          let item = { docId: val.payload.doc.id, ...val.payload.doc.data() as Cake };
-          if (this.currentCategory === item.category) {
-            this.categoryCakes.push(item);
-          } else {
-            return;
-          }
-        })
-
         // console.log(this.categoryCakes.length);
 
         if(this.categoryCakes.length === 0 ) {
